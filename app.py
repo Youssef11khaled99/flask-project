@@ -12,7 +12,7 @@ def task():
       numbers = request.form['numbers']
       if target == '' or array_size == '' or numbers == '' :
         return "Please fill all input fields!!"
-      r = requests.post('https://gp-task-algorithm.herokuapp.com/', data={"n":6, "t":2, "i":[1,2,3]} )
+      r = requests.post('https://gp-task-algorithm.herokuapp.com/', data={"n":array_size, "t":target, "i":numbers} )
       json_object = r.text
       return json_object
 
